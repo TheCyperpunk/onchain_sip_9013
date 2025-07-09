@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #3B82F6; /* blue-500 */
+    --color-primary-50: #EFF6FF; /* blue-50 */
+    --color-primary-100: #DBEAFE; /* blue-100 */
+    --color-primary-200: #BFDBFE; /* blue-200 */
+    --color-primary-300: #93C5FD; /* blue-300 */
+    --color-primary-400: #60A5FA; /* blue-400 */
+    --color-primary-500: #3B82F6; /* blue-500 */
+    --color-primary-600: #2563EB; /* blue-600 */
+    --color-primary-700: #1D4ED8; /* blue-700 */
+    --color-primary-800: #1E40AF; /* blue-800 */
+    --color-primary-900: #1E3A8A; /* blue-900 */
+    --color-primary-foreground: #FFFFFF; /* white */
+
+    /* Secondary Colors */
+    --color-secondary: #8B5CF6; /* violet-500 */
+    --color-secondary-50: #F5F3FF; /* violet-50 */
+    --color-secondary-100: #EDE9FE; /* violet-100 */
+    --color-secondary-200: #DDD6FE; /* violet-200 */
+    --color-secondary-300: #C4B5FD; /* violet-300 */
+    --color-secondary-400: #A78BFA; /* violet-400 */
+    --color-secondary-500: #8B5CF6; /* violet-500 */
+    --color-secondary-600: #7C3AED; /* violet-600 */
+    --color-secondary-700: #6D28D9; /* violet-700 */
+    --color-secondary-800: #5B21B6; /* violet-800 */
+    --color-secondary-900: #4C1D95; /* violet-900 */
+    --color-secondary-foreground: #FFFFFF; /* white */
+
+    /* Accent Colors */
+    --color-accent: #10B981; /* emerald-500 */
+    --color-accent-50: #ECFDF5; /* emerald-50 */
+    --color-accent-100: #D1FAE5; /* emerald-100 */
+    --color-accent-200: #A7F3D0; /* emerald-200 */
+    --color-accent-300: #6EE7B7; /* emerald-300 */
+    --color-accent-400: #34D399; /* emerald-400 */
+    --color-accent-500: #10B981; /* emerald-500 */
+    --color-accent-600: #059669; /* emerald-600 */
+    --color-accent-700: #047857; /* emerald-700 */
+    --color-accent-800: #065F46; /* emerald-800 */
+    --color-accent-900: #064E3B; /* emerald-900 */
+    --color-accent-foreground: #FFFFFF; /* white */
+
+    /* Background Colors */
+    --color-background: #0F172A; /* slate-900 */
+    --color-background-secondary: #1E293B; /* slate-800 */
+    --color-surface: #1E293B; /* slate-800 */
+    --color-surface-secondary: #334155; /* slate-700 */
+    --color-surface-tertiary: #475569; /* slate-600 */
+
+    /* Text Colors */
+    --color-text-primary: #F8FAFC; /* slate-50 */
+    --color-text-secondary: #94A3B8; /* slate-400 */
+    --color-text-tertiary: #64748B; /* slate-500 */
+    --color-text-muted: #475569; /* slate-600 */
+
+    /* Status Colors */
+    --color-success: #059669; /* emerald-600 */
+    --color-success-50: #ECFDF5; /* emerald-50 */
+    --color-success-100: #D1FAE5; /* emerald-100 */
+    --color-success-200: #A7F3D0; /* emerald-200 */
+    --color-success-300: #6EE7B7; /* emerald-300 */
+    --color-success-400: #34D399; /* emerald-400 */
+    --color-success-500: #10B981; /* emerald-500 */
+    --color-success-600: #059669; /* emerald-600 */
+    --color-success-700: #047857; /* emerald-700 */
+    --color-success-foreground: #FFFFFF; /* white */
+
+    --color-warning: #D97706; /* amber-600 */
+    --color-warning-50: #FFFBEB; /* amber-50 */
+    --color-warning-100: #FEF3C7; /* amber-100 */
+    --color-warning-200: #FDE68A; /* amber-200 */
+    --color-warning-300: #FCD34D; /* amber-300 */
+    --color-warning-400: #FBBF24; /* amber-400 */
+    --color-warning-500: #F59E0B; /* amber-500 */
+    --color-warning-600: #D97706; /* amber-600 */
+    --color-warning-700: #B45309; /* amber-700 */
+    --color-warning-foreground: #FFFFFF; /* white */
+
+    --color-error: #DC2626; /* red-600 */
+    --color-error-50: #FEF2F2; /* red-50 */
+    --color-error-100: #FEE2E2; /* red-100 */
+    --color-error-200: #FECACA; /* red-200 */
+    --color-error-300: #FCA5A5; /* red-300 */
+    --color-error-400: #F87171; /* red-400 */
+    --color-error-500: #EF4444; /* red-500 */
+    --color-error-600: #DC2626; /* red-600 */
+    --color-error-700: #B91C1C; /* red-700 */
+    --color-error-foreground: #FFFFFF; /* white */
+
+    /* Border Colors */
+    --color-border: rgba(148, 163, 184, 0.1); /* slate-400 with opacity */
+    --color-border-hover: rgba(148, 163, 184, 0.2); /* slate-400 with opacity */
+    --color-border-focus: rgba(59, 130, 246, 0.5); /* blue-500 with opacity */
+
+    /* Shadow Colors */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-xl: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-text-primary font-body;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .font-data {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', 'Courier New', monospace;
+  }
+}
+
+@layer components {
+  .glass-morphism {
+    @apply backdrop-blur-md bg-surface/20 border border-border;
+  }
+
+  .glass-morphism-strong {
+    @apply backdrop-blur-lg bg-surface/40 border border-border;
+  }
+
+  .transition-smooth {
+    @apply transition-all duration-200 ease-out;
+  }
+
+  .transition-medium {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .shadow-elevation-1 {
+    box-shadow: var(--shadow-sm);
+  }
+
+  .shadow-elevation-2 {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-elevation-3 {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .shadow-elevation-4 {
+    box-shadow: var(--shadow-xl);
+  }
+}
